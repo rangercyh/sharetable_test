@@ -1,0 +1,22 @@
+-- common config
+root = "./"
+lualoader = root .. "skynet/lualib/loader.lua"
+snax = root.."service/?.lua;"..root.."service/?/main.lua;"
+lua_cpath = root .. "build/clualib/?.so"
+cpath = root.."build/cservice/?.so"
+bootstrap = "snlua bootstrap"	-- The service for bootstrap
+
+-- subsystem config
+lua_path = root.."skynet/lualib/?.lua;"
+luaservice = root.."service/?.lua;"..root.."service/?/main.lua;"..root.."skynet/service/?.lua;"
+
+-- entry point
+start = "main"	-- main script
+
+-- res
+respath = root .. "res"
+
+-- variable
+logger = nil
+logpath = "."
+harbor = 0
