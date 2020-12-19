@@ -11,8 +11,8 @@ local function get_share_list(file)
 end
 
 local function reload_resource()
-    local extra = get_share_list("sharedata_list.lua")
-    sharetable.loadfile(respath .. "/sharedata_list.lua")
+    local extra = get_share_list("sharetable_list.lua")
+    sharetable.loadfile(respath .. "/sharetable_list.lua")
     local rel_path
     for _, path in pairs(extra) do
         rel_path = respath .. "/" .. path
