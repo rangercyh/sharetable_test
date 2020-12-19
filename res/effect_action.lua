@@ -1,5 +1,8 @@
 return {
     ["effect_action"] = {
+        [1] = {
+            ["test_func"] = function(print, t) print(t.aa, t.aa == "abc") end,
+        },
         [1001] = {
             ["action"] = function (env, attacker, target, buff, effect, skill) local result = {}; result.subHpNormal=env.math.clamp(attacker:GetAttackNormal()-target:GetDefenceNormal(),0,10000) return result, {"subHpNormal",} end,
             ["action_id"] = 1001,

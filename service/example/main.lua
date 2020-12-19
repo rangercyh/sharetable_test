@@ -1,6 +1,7 @@
 local Skynet = require 'skynet'
 require "skynet.manager"
 local ResLib = require "reslib"
+local test = require "test"
 
 local Command = {}
 
@@ -23,4 +24,5 @@ Skynet.start(__init__)
 
 Skynet.init(function()
     ResLib.preload()
+    test.test()
 end, "reslib_preload")
