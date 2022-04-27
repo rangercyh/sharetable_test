@@ -3,6 +3,8 @@ require "skynet.manager"
 local ResLib = require "reslib"
 local test = require "test"
 
+local idx = ...
+
 local Command = {}
 
 function Command.reload_resource()
@@ -16,7 +18,7 @@ local function __init__()
         local f = assert(Command[cmd], cmd)
         f(...)
     end)
-    Skynet.register("example")
+    Skynet.register("example" .. idx)
     print('example booted', Skynet.self())
 end
 
